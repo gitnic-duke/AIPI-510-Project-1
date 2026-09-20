@@ -47,25 +47,24 @@ CHART_START = pd.Timestamp("1958-08-02")
 CHART_END = pd.Timestamp("2021-05-29")
 
 
-def _count_genre_labels(value):
-    """Number of Spotify genre labels in a raw `spotify_genre` cell.
+def parse_genres(value):
+    """Turn a raw `spotify_genre` cell into a list of labels.
 
-    The column stores a list as text, e.g. "['rock', 'pop']". Used only as a tie-break in
-    resolve_audio(): when two rows describe the same track, the one carrying more labels
-    loses less information.
+    The column stores a list as text, e.g. "['rock', 'pop']". Shared with features.py, which
+    maps the labels onto Billboard's genre categories.
 
     Args:
         value (str | float): a raw `spotify_genre` cell, possibly missing.
 
     Returns:
-        int: how many labels the cell holds; 0 if missing or unparseable.
+        list[str]: the labels; empty if the cell is missing or unparseable.
     """
     if pd.isna(value):
-        return 0
+        return []
     try:
-        return len(ast.literal_eval(value))
+        return ast.literal_eval(value)
     except (ValueError, SyntaxError):
-        return 0
+        return []
 
 
 def load_raw():
@@ -127,7 +126,7 @@ def resolve_audio(audio):
     # Tie-breaks, so the surviving row never depends on the order rows happen to be in:
     # most popular first, then the longer genre list, then track id.
     unique_audio = unique_audio.assign(
-        _n_genres=unique_audio.spotify_genre.map(_count_genre_labels))
+        _n_genres=unique_audio.spotify_genre.map(lambda cell: len(parse_genres(cell))))
     non_duplicate_audio = (
         unique_audio
         .sort_values(["song_id", "spotify_track_popularity", "_n_genres", "spotify_track_id"],
