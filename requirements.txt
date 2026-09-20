@@ -1,0 +1,4 @@
+# Direct dependencies only; pip resolves the rest.
+pandas==3.0.6
+matplotlib==3.11.2
+ipykernel==7.3.0
