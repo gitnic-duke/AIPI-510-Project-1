@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shorter, Sadder, Faster? — How the Hits Changed</title>
+<meta name="description" content="Sixty-two years of the Billboard Hot 100, and what actually changed about hit songs.">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #5c5c5c;
+    --rule: #e2e2e2;
+    --bg: #fdfdfc;
+    --accent: #b5462c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 18px/1.65 Georgia, "Iowan Old Style", serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header { padding: 72px 0 40px; border-bottom: 1px solid var(--rule); }
+  h1 { font-size: 2.6rem; line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; }
+  .standfirst { font-size: 1.25rem; color: var(--muted); margin: 0 0 24px; }
+  .byline { font: 14px/1.5 -apple-system, system-ui, sans-serif; color: var(--muted); }
+
+  h2 {
+    font-size: 1.6rem; line-height: 1.25; margin: 64px 0 16px;
+    letter-spacing: -0.01em;
+  }
+  h2 .count {
+    display: block; font: 600 13px/1 -apple-system, system-ui, sans-serif;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--accent); margin-bottom: 10px;
+  }
+  p { margin: 0 0 18px; }
+  a { color: var(--accent); }
+
+  figure { margin: 28px 0 32px; }
+  figure img { width: 100%; height: auto; display: block; }
+  figcaption {
+    font: 15px/1.5 -apple-system, system-ui, sans-serif;
+    color: var(--muted); margin-top: 10px;
+  }
+
+  /* Delete this rule once every placeholder is replaced by a real figure. */
+  .placeholder {
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    min-height: 320px; padding: 24px; background: #f1f0ee;
+    border: 1px dashed #c4c2bd; color: var(--muted);
+    font: 14px/1.6 -apple-system, system-ui, sans-serif;
+  }
+
+  .pull {
+    border-left: 3px solid var(--accent); padding-left: 20px;
+    margin: 32px 0; font-size: 1.2rem; color: var(--ink);
+  }
+  .note {
+    background: #f4f2ee; padding: 20px 24px; margin: 32px 0;
+    font: 16px/1.6 -apple-system, system-ui, sans-serif;
+  }
+  .note h3 { font-size: 1rem; margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .note p:last-child { margin-bottom: 0; }
+
+  footer {
+    margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--rule);
+    font: 15px/1.6 -apple-system, system-ui, sans-serif; color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    h1 { font-size: 2rem; }
+    header { padding-top: 48px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <!-- A title that makes a claim. Replace once you know which finding leads. -->
+  <h1>Shorter, sadder, faster?</h1>
+  <p class="standfirst">
+    Sixty-two years of the Billboard Hot 100 say the hits really did change — just not in the
+    way everyone assumes.
+  </p>
+  <p class="byline">
+    Nicholas Wang and Kuba Romanczuk · AIPI 510, Duke University ·
+    <a href="https://github.com/gitnic-duke/AIPI-510-Project-1">code and data</a>
+  </p>
+</header>
+
+<!-- WHY IT MATTERS / WHO IT IS FOR. Short. Two paragraphs at most.
+     Audience: people who suspect music has changed and want to know whether it's true,
+     or whether they've just got older. -->
+<p>
+  TODO — open with the feeling the reader already has. Everyone over thirty suspects that songs
+  are shorter, sadder, more processed. Say what we did: took every song that charted on the
+  Hot 100 from 1958 to 2021, roughly 29,000 of them, and compared what they sound like.
+</p>
+<p>
+  TODO — why this is worth a reader's three minutes, and who it's for.
+</p>
+
+<h2><span class="count">Finding 01</span>Hits stopped sounding happy</h2>
+
+<figure>
+  <!-- <img src="../figures/valence_by_year.png" alt="Median valence of charting songs by year, 1959 to 2020"> -->
+  <div class="placeholder">figures/valence_by_year.png<br>Median valence by year, 1959–2020</div>
+  <figcaption>
+    TODO — one sentence saying what the reader should see, plus what valence is in plain words.
+  </figcaption>
+</figure>
+
+<p>
+  TODO — the number: median valence sits near 0.70 from the 1960s through the 1980s, then falls
+  to 0.47 in the 2010s. Say what a valence of 0.70 versus 0.47 actually sounds like, with an
+  example song at each end.
+</p>
+
+<h2><span class="count">Finding 02</span>The surprise: songs got longer first</h2>
+
+<figure>
+  <!-- <img src="../figures/duration_by_decade.png" alt="Median song length by decade"> -->
+  <div class="placeholder">figures/duration_by_decade.png<br>Median length by decade</div>
+  <figcaption>TODO — caption.</figcaption>
+</figure>
+
+<p class="pull">
+  We expected a steady decline. Instead hits grew from 2.7 minutes in the 1960s to 4.3 in the
+  1990s, and have only been shrinking since — they are still longer than the songs our parents
+  grew up with.
+</p>
+
+<p>
+  TODO — why this matters for the "streaming made songs short" story everyone repeats.
+</p>
+
+<h2><span class="count">Finding 03</span>The chart changed genre</h2>
+
+<figure>
+  <!-- <img src="../figures/genre_mix_by_decade.png" alt="Share of hits by genre in each decade"> -->
+  <div class="placeholder">figures/genre_mix_by_decade.png<br>Genre mix by decade</div>
+  <figcaption>TODO — caption.</figcaption>
+</figure>
+
+<p>
+  TODO — traditional pop is 32% of 1950s hits; rock peaks at 56% in the 1980s; rap and pop
+  together are 68% of the 2010s. Then the interesting question: did every genre get sadder, or
+  did the chart simply fill up with genres that score lower?
+</p>
+
+<h2><span class="count">Finding 04</span>TODO — fourth finding, or cut</h2>
+
+<figure>
+  <!-- <img src="../figures/TODO.png" alt=""> -->
+  <div class="placeholder">figures/TODO.png</div>
+  <figcaption>TODO — caption.</figcaption>
+</figure>
+
+<p>TODO — or delete this section. Three strong findings beat four weak ones.</p>
+
+<h2>What these numbers can't tell you</h2>
+
+<!-- Plain language, no disclaimer dump. Pick the three or four that actually bite. -->
+<p>
+  TODO — <strong>Spotify is guessing too.</strong> Valence and energy are scores from Spotify's
+  own model, not measurements of emotion. We found the same track scored differently on two
+  different days, which tells you how firm these numbers are.
+</p>
+<p>
+  TODO — <strong>Older songs are missing.</strong> We have audio data for 94% of 2010s hits but
+  only 66% of 1950s ones, and the ones missing are the more obscure records.
+</p>
+<p>
+  TODO — <strong>The chart itself kept changing.</strong> Billboard rewrote its formula five
+  times over this period — sales, then digital downloads, then streaming, then YouTube. Some of
+  what looks like music changing is really the scoreboard changing.
+</p>
+<p>
+  TODO — <strong>This is the American chart.</strong> "Hits" here means hits in the United
+  States.
+</p>
+
+<div class="note">
+  <h3>Where the data stops, and why</h3>
+  <p>
+    TODO — our audio data ends in 2021 because Spotify closed public access to these measurements
+    in November 2024. Anyone asking this question today cannot get the data we used. Worth a
+    sentence on what that means for research built on company APIs.
+  </p>
+</div>
+
+<h2>The takeaway</h2>
+
+<p>
+  TODO — what should a reader remember tomorrow? One idea, not three. The honest version is
+  probably that the chart changed more than the music did.
+</p>
+
+<footer>
+  <p>
+    Data: Billboard Hot 100 and Spotify audio features, via
+    <a href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-09-14">TidyTuesday</a>,
+    originally compiled by Sean Miller. Code, cleaning decisions and full column documentation:
+    <a href="https://github.com/gitnic-duke/AIPI-510-Project-1">github.com/gitnic-duke/AIPI-510-Project-1</a>.
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
