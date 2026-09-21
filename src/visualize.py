@@ -131,7 +131,9 @@ def load_data(path):
             raise ValueError(f'{column} must contain True or False.')
     if not songs.eda_core_complete.equals(songs[SCORES].notna().all(axis=1)):
         raise ValueError('Audio completeness flag disagrees with measured scores.')
-    if not songs[SCORES].stack().between(0, 1).all():
+    # dropna first: pandas 3 keeps missing values in stack(), and NaN fails between(),
+    # which would reject every file that has any unmatched audio.
+    if not songs[SCORES].stack().dropna().between(0, 1).all():
         raise ValueError('Audio scores must be between 0 and 1.')
     sample = songs[songs.first_observed_year.between(1960, 2019)].copy()
     if not (sample.decade == sample.first_observed_year // 10 * 10).all():
@@ -568,6 +570,55 @@ def export_missing_audio_sensitivity(sample, tables_dir):
     bounds.to_csv(tables_dir / 'missing_audio_bounds.csv')
 
 
+def export_top_songs(sample, chart_path, tables_dir):
+    """Rank the biggest chart runs, per decade and overall, and export both tables.
+
+    Ranking uses Billboard's own historical year-end method: a song earns 101 minus its
+    position for every week it spends on the chart, so a week at number one is worth 100
+    points and a week at number 100 is worth one. Only chart weeks inside the analysis
+    window count, which keeps the table consistent with every other figure here.
+
+    Chart runs have grown longer over time, so points are not comparable across eras. The
+    per-decade table exists for that reason; the overall table is published with the same
+    caveat stated in the blog.
+
+    Args:
+        sample (pd.DataFrame): songs first seen on the chart in the analysis window.
+        chart_path (Path): the weekly chart_entries.csv written by clean.py.
+        tables_dir (Path): directory the CSV tables are written to.
+
+    Returns:
+        tuple[pd.DataFrame, pd.DataFrame]: (one row per decade, overall top ten).
+    """
+    entries = pd.read_csv(chart_path, parse_dates=['chart_date'])
+    entries = entries[entries.chart_date.dt.year.between(DECADES[0], DECADES[-1] + 9)]
+    entries['points'] = 101 - entries.position
+
+    runs = entries.groupby('song_id').agg(
+        points=('points', 'sum'),
+        weeks=('chart_date', 'nunique'),
+        peak=('position', 'min'),
+        weeks_at_one=('position', lambda position: int((position == 1).sum())),
+        decades=('chart_date', lambda dates: ', '.join(
+            f'{decade}s' for decade in sorted({date.year // 10 * 10 for date in dates}))),
+    )
+
+    ranked = (sample.set_index('song_id')[['song', 'performer', 'genre_bucket', 'decade']]
+              .join(runs, how='inner')
+              .sort_values('points', ascending=False))
+
+    by_decade = (ranked.reset_index()
+                 .sort_values(['decade', 'points'], ascending=[True, False])
+                 .groupby('decade').head(1)
+                 .set_index('decade'))
+    overall = ranked.head(10).reset_index(drop=True)
+    overall.index += 1
+
+    by_decade.to_csv(tables_dir / 'top_song_by_decade.csv')
+    overall.to_csv(tables_dir / 'top_songs_overall.csv', index_label='rank')
+    return by_decade, overall
+
+
 def write_summary(sample, audio, lengths, input_path, tables_dir, output_dir):
     """Write the sample metadata and print the output summary."""
     metadata = {
@@ -692,6 +743,11 @@ def main():
         type=Path,
         default=ROOT / 'data/processed/songs_features.csv'
     )
+    parser.add_argument(
+        '--chart-entries',
+        type=Path,
+        default=ROOT / 'data/processed/chart_entries.csv'
+    )
     parser.add_argument('--output-dir', type=Path, default=ROOT / 'docs/figures')
     args = parser.parse_args()
 
@@ -720,6 +776,7 @@ def main():
     plot_genre_acousticness(audio, lengths, tables_dir, output_dir)
     plot_audio_coverage(sample, tables_dir, output_dir)
     plot_genre_overview(tables_dir, output_dir)
+    export_top_songs(sample, args.chart_entries, tables_dir)
     export_missing_audio_sensitivity(sample, tables_dir)
     write_summary(sample, audio, lengths, args.input, tables_dir, output_dir)
 
