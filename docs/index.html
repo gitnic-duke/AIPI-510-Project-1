@@ -98,7 +98,7 @@
 <h1>The hits changed.<br>Just not all at once.</h1>
 <p class="standfirst">Sadder songs, a beat that holds up, and the return of the short song. Six decades of charting music reveal three changes on three different timelines.</p>
 <p class="byline">Nicholas Wang and Kuba Romanczuk · AIPI 510, Duke University · <a href="https://github.com/gitnic-duke/AIPI-510-Project-1">Project repository</a></p>
-<nav aria-label="Article sections"><a href="#overview">The big picture</a><a href="#danceable">Still danceable</a><a href="#short">Short songs</a><a href="#acoustic">The acoustic shift</a><a href="#methods">Behind the numbers</a></nav>
+<nav aria-label="Article sections"><a href="#overview">The big picture</a><a href="#top">Who was on top</a><a href="#danceable">Still danceable</a><a href="#short">Short songs</a><a href="#acoustic">The acoustic shift</a><a href="#methods">Behind the numbers</a></nav>
 </header>
 
 <main id="main">
@@ -133,6 +133,20 @@
     </figure>
 </div>
 <p class="byline">Lines show annual medians. Shaded bands contain the middle 50% of songs, not uncertainty around the line. Their overlap reminds us that every era contains many different sounds. <a href="figures/data/annual_audio.csv">Chart data</a>.</p>
+<h3>What the scores sound like</h3>
+<p>These numbers are easier to trust once you hear them. Each row takes a song from the high and low end of one score, drawn from the biggest chart runs in our data.</p>
+<div class="table-wrap">
+  <table>
+    <caption>Each score, at both ends</caption>
+    <thead><tr><th scope="col">Score</th><th scope="col">Sounds high</th><th scope="col">Sounds low</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Valence<br><span style="font-weight:400">how positive it sounds</span></th><td>Pumped Up Kicks &mdash; Foster The People (0.97)</td><td>The Hills &mdash; The Weeknd (0.14)</td></tr>
+      <tr><th scope="row">Danceability</th><td>SexyBack &mdash; Justin Timberlake (0.97)</td><td>Stay With Me &mdash; Sam Smith (0.42)</td></tr>
+      <tr><th scope="row">Energy</th><td>Never Gonna Give You Up &mdash; Rick Astley (0.94)</td><td>I Will Always Love You &mdash; Whitney Houston (0.21)</td></tr>
+      <tr><th scope="row">Acousticness</th><td>Stay &mdash; Rihanna (0.95)</td><td>Hot N Cold &mdash; Katy Perry (0.0001)</td></tr>
+    </tbody></table></div>
+<p class="byline">Values are the Spotify scores for each song&rsquo;s matched recording, as used in every chart here.</p>
+<p>The first row shows what valence does and does not capture. &ldquo;Pumped Up Kicks&rdquo; sits near the very top of the scale because the model hears a bright, sunny arrangement; its lyrics describe a school shooting. Valence measures the sound, never the words.</p>
 <p>Valence stays near 0.70 through the 1980s, then falls. Danceability is higher in recent decades than in the 1960s. Energy peaks at the decade level in the 2000s, while the largest acousticness decline happens much earlier. These are overall trends, but diving deeper we'll start to see some more interesting stories.</p>
 <h3>The mix of genres changed, too</h3>
 <p>The charts above combine many different kinds of music. In our broad genre groups, rock accounts for a larger share of songs in earlier decades, while pop and rap occupy larger shares in the 2010s. That raises a question for the stories below: did the sound change within genres, or did different genres take up more of the chart?</p>
@@ -149,6 +163,43 @@
   song-by-song classifications. Some tags appear historically implausible,
   so we treat the breakdown as exploratory context.
 </p>
+</section>
+
+<section id="top"><h2><span class="count">Interlude</span>Which songs actually dominated?</h2>
+<p>A decade of medians is hard to hum. So here is the other view: the songs that spent the most time highest on the chart. We score each one the way <em>Billboard</em> scored its own year-end charts for decades — a song earns 101 points minus its position for every week it appears, so a week at number one is worth 100 and a week at number 100 is worth one.</p>
+<div class="table-wrap">
+  <table>
+    <caption>The biggest chart run of each decade</caption>
+    <thead><tr><th scope="col">Decade</th><th scope="col">Song</th><th scope="col">Artist</th><th scope="col">Genre</th><th scope="col">Peak</th><th scope="col">Weeks</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">1960s</th><td>The Twist</td><td>Chubby Checker</td><td>rock</td><td>1</td><td>40</td></tr>
+      <tr><th scope="row">1970s</th><td>Bohemian Rhapsody</td><td>Queen</td><td>rock</td><td>2</td><td>44</td></tr>
+      <tr><th scope="row">1980s</th><td>Gloria</td><td>Laura Branigan</td><td>rock</td><td>2</td><td>36</td></tr>
+      <tr><th scope="row">1990s</th><td>How Do I Live</td><td>LeAnn Rimes</td><td>country</td><td>2</td><td>69</td></tr>
+      <tr><th scope="row">2000s</th><td>I&rsquo;m Yours</td><td>Jason Mraz</td><td>pop</td><td>6</td><td>76</td></tr>
+      <tr><th scope="row">2010s</th><td>Radioactive</td><td>Imagine Dragons</td><td>rock</td><td>3</td><td>87</td></tr>
+    </tbody></table></div>
+<p class="byline">Songs are placed in the decade they first reached the chart; points count only chart weeks inside 1960&ndash;2019. Genre labels come from our exploratory artist-tag buckets. <a href="figures/data/top_song_by_decade.csv">Chart data</a>.</p>
+<p>Two things stand out. A 1960s number one managed 40 weeks on the chart; a 2010s number three managed 87. And &ldquo;Bohemian Rhapsody&rdquo; appears on the Hot 100 in three separate decades &mdash; the 1970s, the 1990s after <em>Wayne&rsquo;s World</em>, and the 2010s after the biopic &mdash; which is a reminder that a chart run is an event, not a property of a song.</p>
+<h3>And across the whole period</h3>
+<div class="table-wrap">
+  <table>
+    <caption>The ten largest chart runs, 1960&ndash;2019</caption>
+    <thead><tr><th scope="col">#</th><th scope="col">Song</th><th scope="col">Artist</th><th scope="col">Genre</th><th scope="col">Peak</th><th scope="col">Weeks</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">1</th><td>Radioactive</td><td>Imagine Dragons</td><td>rock</td><td>3</td><td>87</td></tr>
+      <tr><th scope="row">2</th><td>How Do I Live</td><td>LeAnn Rimes</td><td>country</td><td>2</td><td>69</td></tr>
+      <tr><th scope="row">3</th><td>Foolish Games / You Were Meant For Me</td><td>Jewel</td><td>rock</td><td>2</td><td>65</td></tr>
+      <tr><th scope="row">4</th><td>I&rsquo;m Yours</td><td>Jason Mraz</td><td>pop</td><td>6</td><td>76</td></tr>
+      <tr><th scope="row">5</th><td>Party Rock Anthem</td><td>LMFAO Featuring Lauren Bennett &amp; GoonRock</td><td>pop</td><td>1</td><td>68</td></tr>
+      <tr><th scope="row">6</th><td>Shape Of You</td><td>Ed Sheeran</td><td>pop</td><td>1</td><td>58</td></tr>
+      <tr><th scope="row">7</th><td>Counting Stars</td><td>OneRepublic</td><td>pop</td><td>2</td><td>68</td></tr>
+      <tr><th scope="row">8</th><td>Uptown Funk!</td><td>Mark Ronson Featuring Bruno Mars</td><td>pop</td><td>1</td><td>56</td></tr>
+      <tr><th scope="row">9</th><td>Rolling In The Deep</td><td>Adele</td><td>pop</td><td>1</td><td>65</td></tr>
+      <tr><th scope="row">10</th><td>Sunflower (Spider-Man: Into The Spider-Verse)</td><td>Post Malone &amp; Swae Lee</td><td>rap</td><td>1</td><td>53</td></tr>
+    </tbody></table></div>
+<p class="byline">Same scoring. <a href="figures/data/top_songs_overall.csv">Chart data, including weeks at number one</a>.</p>
+<aside class="note"><h3>Why nothing here is older than 1990</h3><p>Seven of these ten runs happened in the 2010s and none before 1990, which says more about the chart than about the music. Chart runs have grown much longer: <em>Billboard</em> changed how songs leave the Hot 100, and streaming keeps a familiar song in circulation for months. A points total therefore compares eras unfairly, which is why the per-decade table above exists. Read this one as &ldquo;the longest, highest chart runs&rdquo;, not &ldquo;the best songs&rdquo;.</p></aside>
 </section>
 
 <section id="danceable"><h2><span class="count">Story 01</span>Lower valence, still danceable</h2>
