@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shorter, Sadder, Faster? — How the Hits Changed</title>
-<meta name="description" content="Sixty-two years of the Billboard Hot 100, and what actually changed about hit songs.">
+<title>The hits changed. Just not all at once.</title>
+<meta name="description" content="Six decades of Billboard hits: lower valence alongside danceability, the return of short songs, and an earlier acoustic shift.">
 <style>
   :root {
     --ink: #1a1a1a;
@@ -46,13 +46,6 @@
     color: var(--muted); margin-top: 10px;
   }
 
-  /* Delete this rule once every placeholder is replaced by a real figure. */
-  .placeholder {
-    display: flex; align-items: center; justify-content: center; text-align: center;
-    min-height: 320px; padding: 24px; background: #f1f0ee;
-    border: 1px dashed #c4c2bd; color: var(--muted);
-    font: 14px/1.6 -apple-system, system-ui, sans-serif;
-  }
 
   .pull {
     border-left: 3px solid var(--accent); padding-left: 20px;
@@ -75,141 +68,180 @@
     h1 { font-size: 2rem; }
     header { padding-top: 48px; }
   }
+
+  .wrap { max-width: 820px; }
+  header { margin-bottom: 32px; }
+  .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .chart-grid figure { margin: 12px 0; min-width: 0; }
+  .chart-grid figcaption { font-size: 14px; }
+  .eyebrow { font: 600 13px/1.5 system-ui,sans-serif; color: var(--accent); letter-spacing: .09em; text-transform: uppercase; }
+  nav { font: 14px/1.8 system-ui,sans-serif; margin-top: 24px; }
+  nav a { margin-right: 16px; display: inline-block; }
+  h3 { font-size: 1.2rem; line-height: 1.4; margin-top: 32px; }
+  .table-wrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font: 15px/1.5 system-ui,sans-serif; margin: 18px 0; }
+  caption { text-align: left; margin-bottom: 12px; font-weight: 600; }
+  th,td { text-align: right; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+  th:first-child,td:first-child { text-align: left; }
+  th { background: #f4f2ee; }
+  details { font: 15px/1.6 system-ui,sans-serif; margin: 18px 0; }
+  summary { color: var(--accent); cursor: pointer; padding: 8px 0; }
+  .skip { position:absolute; left:-9999px; }
+  .skip:focus { position:static; }
+  @media(max-width:600px) { .chart-grid { grid-template-columns: 1fr; gap: 0; } .wrap { padding-left:16px; padding-right:16px; } h2 { margin-top:48px; } }
+  @media print { nav,.skip { display:none; } figure { break-inside:avoid; } }
 </style>
 </head>
-<body>
-<div class="wrap">
-
+<body><a class="skip" href="#main">Skip to article</a><div class="wrap">
 <header>
-  <!-- A title that makes a claim. Replace once you know which finding leads. -->
-  <h1>Shorter, sadder, faster?</h1>
-  <p class="standfirst">
-    Sixty-two years of the Billboard Hot 100 say the hits really did change — just not in the
-    way everyone assumes.
-  </p>
-  <p class="byline">
-    Nicholas Wang and Kuba Romanczuk · AIPI 510, Duke University ·
-    <a href="https://github.com/gitnic-duke/AIPI-510-Project-1">code and data</a>
-  </p>
+<p class="eyebrow">The sound of the Hot 100 · 1960–2019</p>
+<h1>The hits changed.<br>Just not all at once.</h1>
+<p class="standfirst">Sadder songs, a beat that holds up, and the return of the short song. Six decades of charting music reveal three changes on three different timelines.</p>
+<p class="byline">Nicholas Wang and Kuba Romanczuk · AIPI 510, Duke University · <a href="https://github.com/gitnic-duke/AIPI-510-Project-1">Project repository</a></p>
+<nav aria-label="Article sections"><a href="#overview">The big picture</a><a href="#danceable">Still danceable</a><a href="#short">Short songs</a><a href="#acoustic">The acoustic shift</a><a href="#methods">Behind the numbers</a></nav>
 </header>
 
-<!-- WHY IT MATTERS / WHO IT IS FOR. Short. Two paragraphs at most.
-     Audience: people who suspect music has changed and want to know whether it's true,
-     or whether they've just got older. -->
-<p>
-  TODO — open with the feeling the reader already has. Everyone over thirty suspects that songs
-  are shorter, sadder, more processed. Say what we did: took every song that charted on the
-  Hot 100 from 1958 to 2021, roughly 29,000 of them, and compared what they sound like.
-</p>
-<p>
-  TODO — why this is worth a reader's three minutes, and who it's for.
-</p>
-
-<h2><span class="count">Finding 01</span>Hits stopped sounding happy</h2>
-
+<main id="main">
+<p>Put a 1960s hit next to one from the 2010s and the difference can feel obvious. Explaining that difference is harder. Did songs get less upbeat? Shorter? Less acoustic? And did those changes happen together?</p>
+<p>We followed 27,549 songs first seen on the U.S. Billboard Hot 100 between 1960 and 2019, using Spotify measurements of their matched recordings. The result is a history with several turning points: acousticness fell early, positive-sounding musical character fell later, and song length grew before it shrank. Through it all, a less positive sound did not necessarily mean a less danceable song.</p>
+<aside class="note"><h3>What counts as a hit here?</h3><p>Any song that appeared on the Hot 100—not just a number one. Each song counts once, in the year we first see it on the chart, which may differ from its release year. We use six complete decades. Audio comparisons cover 23,039 songs with all four Spotify audio scores; length comparisons cover 23,096 recordings with known duration. “Typical” below means the median: half the songs fall on each side.</p></aside>
+<section id="overview"><h2><span class="count">The big picture</span>Trends over the decades</h2>
+<p>Starting with length, the typical recording grew from 2:39 in the 1960s to 4:18 in the 1990s, before falling to 3:35 in the 2010s.</p>
+<figure><a href="figures/duration_overview.svg" aria-label="Open full-size chart: Median length rises from 2:39 in the 1960s to 4:18 in the 1990s, then falls to 3:35 in the 2010s."><img src="figures/duration_overview.svg" alt="Median length rises from 2:39 in the 1960s to 4:18 in the 1990s, then falls to 3:35 in the 2010s." loading="lazy"></a><figcaption>Each point is the median duration of matched Spotify recordings first seen on the chart in that decade. Duration may reflect an album or remastered version rather than the original charting single.</figcaption></figure>
+<p>The sound changes are just as uneven. These four Spotify scores run from 0 to 1, but each describes a different characteristic.</p>
+<div class="chart-grid">
+  <figure>
+    <a href="figures/overview_valence.svg" aria-label="Open full-size chart: Annual valence is generally higher early in the period and declines in later decades.">
+      <img src="figures/overview_valence.svg" alt="Annual valence is generally higher early in the period and declines in later decades." loading="lazy">
+    </a>
+    <figcaption><strong>Valence:</strong> how positive the music sounds, disregarding lyric meanings</figcaption>
+  </figure>
+  <figure>
+    <a href="figures/overview_danceability.svg" aria-label="Open full-size chart: Annual danceability remains relatively high in later decades.">
+      <img src="figures/overview_danceability.svg" alt="Annual danceability remains relatively high in later decades." loading="lazy">
+    </a>
+      <figcaption><strong>Danceability:</strong> how suitable the rhythm is for dancing, according to the audio model</figcaption></figure>
+  <figure>
+    <a href="figures/overview_energy.svg" aria-label="Open full-size chart: Annual energy rises over much of the period but does not keep rising into the 2010s.">
+      <img src="figures/overview_energy.svg" alt="Annual energy rises over much of the period but does not keep rising into the 2010s." loading="lazy"></a>
+      <figcaption><strong>Energy:</strong> perceived intensity and activity</figcaption>
+    </figure>
+  <figure>
+    <a href="figures/overview_acousticness.svg" aria-label="Open full-size chart: Annual acousticness falls steeply early in the period and stays comparatively low thereafter.">
+      <img src="figures/overview_acousticness.svg" alt="Annual acousticness falls steeply early in the period and stays comparatively low thereafter." loading="lazy"></a>
+      <figcaption><strong>Acousticness:</strong> the model’s confidence that a recording is acoustic</figcaption>
+    </figure>
+</div>
+<p class="byline">Lines show annual medians. Shaded bands contain the middle 50% of songs, not uncertainty around the line. Their overlap reminds us that every era contains many different sounds. <a href="figures/data/annual_audio.csv">Chart data</a>.</p>
+<p>Valence stays near 0.70 through the 1980s, then falls. Danceability is higher in recent decades than in the 1960s. Energy peaks at the decade level in the 2000s, while the largest acousticness decline happens much earlier. These are overall trends, but diving deeper we'll start to see some more interesting stories.</p>
+<h3>The mix of genres changed, too</h3>
+<p>The charts above combine many different kinds of music. In our broad genre groups, rock accounts for a larger share of songs in earlier decades, while pop and rap occupy larger shares in the 2010s. That raises a question for the stories below: did the sound change within genres, or did different genres take up more of the chart?</p>
 <figure>
-  <!-- <img src="../figures/valence_by_year.png" alt="Median valence of charting songs by year, 1959 to 2020"> -->
-  <div class="placeholder">figures/valence_by_year.png<br>Median valence by year, 1959–2020</div>
-  <figcaption>
-    TODO — one sentence saying what the reader should see, plus what valence is in plain words.
+  <a href="figures/genre_overview.svg" aria-label="Open full-size chart: Genre breakdown by decade">
+    <img src="figures/genre_overview.svg" alt="Stacked percentage bars compare genre groups from the 1960s through the 2010s. Rock has a larger share in earlier decades; pop and rap have larger shares in the 2010s. Unlabeled songs are included." loading="lazy">
+  </a>
+  <figcaption>Each bar adds up to 100% of songs first seen on the Hot 100 in that decade. Each song counts once, regardless of its chart position or weeks on the chart. Songs without audio measurements are included. “Other labeled” combines dance, Latin, Christian, and other tags;“Unlabeled” means no genre label is available.
+    <a href="figures/data/genre_composition_all_songs.csv">Chart data</a>.
   </figcaption>
 </figure>
-
-<p>
-  TODO — the number: median valence sits near 0.70 from the 1960s through the 1980s, then falls
-  to 0.47 in the 2010s. Say what a valence of 0.70 versus 0.47 actually sounds like, with an
-  example song at each end.
+<p class="byline">
+  These broad groups come from Spotify artist tags, not verified
+  song-by-song classifications. Some tags appear historically implausible,
+  so we treat the breakdown as exploratory context.
 </p>
+</section>
 
-<h2><span class="count">Finding 02</span>The surprise: songs got longer first</h2>
-
+<section id="danceable"><h2><span class="count">Story 01</span>Lower valence, still danceable</h2>
+<p>A song can sound less cheerful and still invite you to move. From our data we can see median valence falls from 0.696 in the 1960s to 0.466 in the 2010s, while median danceability rises from 0.538 to 0.641.</p>
+<p>But these separate averages can't tell us whether the <em>same songs</em> combine those qualities. In our analysis combining different features, we found an interesting trend by counting recordings that have both a valence score below 0.5 and danceability of at least 0.5.</p>
 <figure>
-  <!-- <img src="../figures/duration_by_decade.png" alt="Median song length by decade"> -->
-  <div class="placeholder">figures/duration_by_decade.png<br>Median length by decade</div>
-  <figcaption>TODO — caption.</figcaption>
+  <a href="figures/valence_danceability.svg" aria-label="Open full-size chart: The share with valence below 0.5 and danceability at least 0.5 rises from 6.3% in the 1960s to 41.2% in the 2010s.">
+    <img src="figures/valence_danceability.svg" alt="The share with valence below 0.5 and danceability at least 0.5 rises from 6.3% in the 1960s to 41.2% in the 2010s." loading="lazy">
+  </a>
+  <figcaption>The same song must meet both cutoffs. The thresholds are a simple descriptive choice rather than a scientific boundary between happy and sad music. Denominator: songs with all four core audio scores. <a href="figures/data/valence_danceability.csv">Chart data</a>.</figcaption>
 </figure>
-
-<p class="pull">
-  We expected a steady decline. Instead hits grew from 2.7 minutes in the 1960s to 4.3 in the
-  1990s, and have only been shrinking since — they are still longer than the songs our parents
-  grew up with.
-</p>
-
-<p>
-  TODO — why this matters for the "streaming made songs short" story everyone repeats.
-</p>
-
-<h2><span class="count">Finding 03</span>The chart changed genre</h2>
-
+<p class="pull">From about 1 in 16 songs to about 2 in 5: less positive-sounding songs with a danceable rhythm on the rise.</p>
+<p>The result is not an accident of choosing exactly 0.5. In the notebook, the share rises under all nine combinations of cutoffs at 0.4, 0.5, and 0.6. Giving each performer credit equal weight produces a similar change, as does looking only at songs that reached the top 10.</p>
+<h3>Is that just a change in genre?</h3>
+<p>Not entirely, under our exploratory genre mapping. Among songs tagged as rap, the joint share rises from 16.5% in the 1990s to 57.1% in the 2010s; pop rises from 26.9% to 36.5%. Country moves in the other direction over that comparison, from 37.5% to 27.4%. The overall trend is not a rule that every genre follows.</p>
+<h3>What this says about U.S. listeners</h3>
 <figure>
-  <!-- <img src="../figures/genre_mix_by_decade.png" alt="Share of hits by genre in each decade"> -->
-  <div class="placeholder">figures/genre_mix_by_decade.png<br>Genre mix by decade</div>
-  <figcaption>TODO — caption.</figcaption>
+<img src="figures/images/emotional_dance_playlist_cover.jpg" alt="Emotional Dance Playlist Cover" style="width: 50%; display: block; margin-left: auto; margin-right: auto;" loading="lazy">
 </figure>
+<p>This trend shows an increased popularity in the U.S. of perceived "sadder" songs that are still danceable. Intuitively, danceable songs might be more associated with being happy or positive sounding, but recent decades have started to flip this association. Perhaps this reflects a change in the psyche and general attitude of U.S. music listeners. What makes a song appealing to a person is complex, but one explanation for this change in preference could be that people are gravitating towards sadder sounding songs they can empathize with while still being able to relieve stress through the song's danceability. Extrapolating further, this could represent an increasingly negative sentiment towards modern day life and its stressful nature. Note: this isn't supported by evidence, it's just speculation that could help explain the trends we're seeing.</p>
+</section>
 
-<p>
-  TODO — traditional pop is 32% of 1950s hits; rock peaks at 56% in the 1980s; rap and pop
-  together are 68% of the 2010s. Then the interesting question: did every genre get sadder, or
-  did the chart simply fill up with genres that score lower?
-</p>
-
-<h2><span class="count">Finding 04</span>TODO — fourth finding, or cut</h2>
-
+<section id="short"><h2><span class="count">Story 02</span>Short songs are making a comeback</h2>
+<p>“Songs are getting shorter” depends on where the comparison starts. Against the 1990s, yes. Against the 1960s, no. The typical 2010s recording is about 43 seconds shorter than its 1990s counterpart—and about 56 seconds longer than its 1960s counterpart.</p>
 <figure>
-  <!-- <img src="../figures/TODO.png" alt=""> -->
-  <div class="placeholder">figures/TODO.png</div>
-  <figcaption>TODO — caption.</figcaption>
+  <a href="figures/short_songs.svg" aria-label="Open full-size chart: Songs under three minutes account for 77.6% in the 1960s, 3.3% in the 1990s, and 14.2% in the 2010s.">
+    <img src="figures/short_songs.svg" alt="Songs under three minutes account for 77.6% in the 1960s, 3.3% in the 1990s, and 14.2% in the 2010s." loading="lazy">
+  </a>
+  <figcaption>A short song here means a matched recording strictly under three minutes. Short songs became more common after the 1990s, but remained far less common than in the 1960s. <a href="figures/data/duration.csv">Chart data</a>.</figcaption>
 </figure>
+<p>The comeback is visible within the 2010s too. The annual median falls from about 3:45 in 2010 to 3:14 in 2019. Decade summaries soften a change that was still unfolding at the end of our analysis window.</p>
+<figure>
+  <a href="figures/recent_duration.svg" aria-label="Open full-size chart: Annual median duration falls from about 3:45 in 2010 to 3:14 in 2019.">
+    <img src="figures/recent_duration.svg" alt="Annual median duration falls from about 3:45 in 2010 to 3:14 in 2019." loading="lazy">
+  </a>
+  <figcaption>Annual medians add detail to the decade-level pattern. All known durations remain in the calculation; this line does not remove unusually long recordings. <a href="figures/data/annual_duration.csv">Chart data</a>.</figcaption>
+</figure>
+<h3>Shorter within genres, too</h3>
+<p>Pop, rock, rap, and R&amp;B all have shorter median recordings in the 2010s than in the 1990s under our current tags. Country’s change is smaller. A changing genre mix is therefore only part of the description.</p>
+<div class="table-wrap">
+  <table>
+    <caption>Typical recording length within our genre buckets</caption>
+    <thead><tr><th scope="col">Bucket</th><th scope="col">1990s</th><th scope="col">2010s</th><th scope="col">Change</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Pop</th><td>4:18</td><td>3:37</td><td>42 sec shorter</td></tr>
+      <tr><th scope="row">Rock</th><td>4:21</td><td>3:49</td><td>32 sec shorter</td></tr>
+      <tr><th scope="row">Rap</th><td>4:14</td><td>3:37</td><td>37 sec shorter</td></tr>
+      <tr><th scope="row">R&amp;B</th><td>4:36</td><td>3:47</td><td>49 sec shorter</td></tr>
+      <tr><th scope="row">Country</th><td>3:37</td><td>3:29</td><td>8 sec shorter</td></tr>
+    </tbody></table></div>
+<p class="byline">Each displayed genre-decade has at least 50 known durations. Artist-tag buckets are exploratory. Changes are calculated before rounding the displayed times. <a href="figures/data/genre_duration.csv">Data and sample sizes</a>.</p>
+<!-- <p>This pattern might bring streaming to mind, but the comparison doesn't isolate its effect. Streaming likely played a part, but what we have is a change in recording length, not evidence of what caused it. The decline isn't driven by a handful of extremely long tracks either: removing recordings over ten minutes changes every decade’s median by less than 0.2 seconds.</p> -->
+<h3>An expected trend</h3>
+<p>This is a trend we already expected when starting this project, just based on our own experience seeing short songs becoming more common. We originally even added a feature to indicate whether a song was released post-streaming era (after 8/11/2007 when Billboard introduced streaming into chart calculations) to look at potential impacts from streaming, but we determined this didn't give us much more interesting insights compared to breaking down by year, decade, and genre. The data basically confirms our original hypothesis that songs are indeed getting shorter, across all genres. However, our analysis also allowed us to uncover that songs were short in the 60s and 70s as well, before getting longer and then shorter again. We can only speculate why that's the case, but there could be a number of factors, including changing music listening habits and trends in song structure.</p>
+</section>
 
-<p>TODO — or delete this section. Three strong findings beat four weak ones.</p>
-
-<h2>What these numbers can't tell you</h2>
-
-<!-- Plain language, no disclaimer dump. Pick the three or four that actually bite. -->
-<p>
-  TODO — <strong>Spotify is guessing too.</strong> Valence and energy are scores from Spotify's
-  own model, not measurements of emotion. We found the same track scored differently on two
-  different days, which tells you how firm these numbers are.
-</p>
-<p>
-  TODO — <strong>Older songs are missing.</strong> We have audio data for 94% of 2010s hits but
-  only 66% of 1950s ones, and the ones missing are the more obscure records.
-</p>
-<p>
-  TODO — <strong>The chart itself kept changing.</strong> Billboard rewrote its formula five
-  times over this period — sales, then digital downloads, then streaming, then YouTube. Some of
-  what looks like music changing is really the scoreboard changing.
-</p>
-<p>
-  TODO — <strong>This is the American chart.</strong> "Hits" here means hits in the United
-  States.
-</p>
-
-<div class="note">
-  <h3>Where the data stops, and why</h3>
-  <p>
-    TODO — our audio data ends in 2021 because Spotify closed public access to these measurements
-    in November 2024. Anyone asking this question today cannot get the data we used. Worth a
-    sentence on what that means for research built on company APIs.
-  </p>
+<section id="acoustic"><h2><span class="count">Story 03</span>The acoustic shift happened earlier</h2>
+<p>The largest drop in acousticness was already visible by the 1980s. Its median fell from 0.579 in the 1960s to 0.124 in the 1980s. After that, it changed much less, even edging upward between the 2000s and 2010s.</p>
+<figure>
+  <a href="figures/acoustic_shift.svg" aria-label="Open full-size chart: Median acousticness drops from 0.579 in the 1960s to 0.124 in the 1980s, then reaches 0.083 in the 2010s.">
+    <img src="figures/acoustic_shift.svg" alt="Median acousticness drops from 0.579 in the 1960s to 0.124 in the 1980s, then reaches 0.083 in the 2010s." loading="lazy"></a>
+    <figcaption>The early drop is much larger than the later changes. Acousticness is a model score, not a direct measure of production technology or the share of acoustic instruments. <a href="figures/data/audio_medians.csv">Chart data</a>.</figcaption>
+</figure>
+<p class="pull">The move toward lower acousticness was largely an earlier chapter—not a change that began with the shortest recent hits.</p>
+<h3>The broad pattern appears inside genre buckets as well</h3>
+<p>Pop, rock, and R&amp;B also show large early declines. Country follows a longer downward path, from 0.722 in the 1960s to 0.094 in the 2010s. These comparisons suggest the trend continues within genres as well rather than the broader trend potentially being caused by a shift in genres.</p>
+<div class="chart-grid">
+  <figure><a href="figures/acoustic_pop.svg" aria-label="Open full-size chart: Pop has lower median acousticness in the 2010s than in the 1960s."><img src="figures/acoustic_pop.svg" alt="Pop has lower median acousticness in the 2010s than in the 1960s." loading="lazy"></a><figcaption>Pop: groups with at least 50 complete-audio songs. All panels use the same 0–1 scale.</figcaption></figure>
+  <figure><a href="figures/acoustic_rock.svg" aria-label="Open full-size chart: Rock has lower median acousticness in the 2010s than in the 1960s."><img src="figures/acoustic_rock.svg" alt="Rock has lower median acousticness in the 2010s than in the 1960s." loading="lazy"></a><figcaption>Rock: groups with at least 50 complete-audio songs. All panels use the same 0–1 scale.</figcaption></figure>
+  <figure><a href="figures/acoustic_rb.svg" aria-label="Open full-size chart: R&amp;B has lower median acousticness in the 2010s than in the 1960s."><img src="figures/acoustic_rb.svg" alt="R&amp;B has lower median acousticness in the 2010s than in the 1960s." loading="lazy"></a><figcaption>R&amp;B: groups with at least 50 complete-audio songs. All panels use the same 0–1 scale.</figcaption></figure>
+  <figure><a href="figures/acoustic_country.svg" aria-label="Open full-size chart: Country has lower median acousticness in the 2010s than in the 1960s."><img src="figures/acoustic_country.svg" alt="Country has lower median acousticness in the 2010s than in the 1960s." loading="lazy"></a><figcaption>Country: groups with at least 50 complete-audio songs. All panels use the same 0–1 scale.</figcaption></figure>
 </div>
+<p class="byline"><a href="figures/data/genre_acousticness.csv">Within-genre values and sample sizes</a>.</p>
+<h3>Acousticness and audio technology</h3>
+<p>The sharp drop in acousticness in the 60s and 70s could be attributed to the advancement of digital audio technology of the time, including the release of the first commercial synthesizer in 1965 and the spread of digital audio systems in the 1970s. As digital audio technology matured and spread, median acousticness dropped even lower to 0.072 in the 2000s before making a slight comeback in the 2010s. If we had data from the 2020s, perhaps we may have seen another small comeback in acoustic song popularity as part of digital minimalism/going analog trends, but this is pure speculation.</p>
+<!-- <p>Acousticness is also the strongest of our four scores against one particular challenge: missing audio. Even assigning the missing songs the most extreme possible scores cannot reverse the decline in <em>mean</em> acousticness between the 1960s and 2010s. That guarantee concerns the endpoint mean comparison. It does not establish the exact timing, validate the recording matches, or apply automatically to medians.</p> -->
+</section>
 
-<h2>The takeaway</h2>
+<section id="methods"><h2>What these numbers can—and cannot—tell us</h2>
+<p>Our charts describe the available matched recordings, not every sound that reached the Hot 100. Of the 27,549 songs in our main period, 4,510 lack the four core audio scores. Earlier decades have larger gaps.</p>
+<figure><a href="figures/audio_coverage.svg" aria-label="Open full-size chart: Complete audio coverage is lower in earlier decades than in the 2010s."><img src="figures/audio_coverage.svg" alt="Complete audio coverage is lower in earlier decades than in the 2010s." loading="lazy"></a><figcaption>Coverage means all four core Spotify scores are present. <a href="figures/data/coverage.csv">Chart data</a>.</figcaption></figure>
+<p><strong>The gaps are uneven.</strong> About 41% of songs without genre labels have core audio, compared with about 93% in the pop bucket and 94% in country. Of the songs missing audio, 2,435 still have genre labels. When describing genre composition, we therefore count all songs, including those without audio, rather than let the audio filter reshape the chart population.</p>
+<p><strong>Could missing audio affect the overall trends?</strong> In our analysis, we tested this by estimated missing scores from observed songs in the same genre and decade, falling back to the decade average for unlabeled or small groups. The mean trends changed very little. They kept their directions even when we shifted those estimates by up to 0.10. These are stated assumptions we used to sanity check the missing data would not skew our main analysis, not proof that the missing songs sound like the observed ones in the same genre decade. None of the figures above uses filled-in audio scores.</p>
+<p><strong>Spotify is guessing too.</strong> The Spotify algorithmic measures do not tell us whether lyrics are sad, whether listeners feel happy, or whether a song is good. Audio scores like valence and energy come from Spotify's own models, which can have its own flaws.</p>
+<p><strong>Data caveats</strong> The duration used belongs to the matched Spotify recording, which can differ from the version that charted. Genre tags can be wrong even when the recording appears plausible.</p>
+<p><strong>This is a history of charting songs in the US.</strong> We give a short-lived chart entry and a long-running hit equal weight. The notebook also checks top-10 songs and chart-appearance weighting; the overall trends for valence, danceability, and acousticness remain. But the data does not separate changes in music from changes in Billboard methodologies to reach the U.S. chart, and they cannot tell us what caused the trends.</p>
+<aside class="note"><h3>Why stop at 2019?</h3><p>The supplied chart data runs from 1958 into 2021. We use 1960–2019 to compare six complete decades without treating the partial 1950s and 2020s as equivalent. These findings do not describe music released after that window.</p></aside></section>
 
-<p>
-  TODO — what should a reader remember tomorrow? One idea, not three. The honest version is
-  probably that the chart changed more than the music did.
-</p>
-
-<footer>
-  <p>
-    Data: Billboard Hot 100 and Spotify audio features, via
-    <a href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-09-14">TidyTuesday</a>,
-    originally compiled by Sean Miller. Code, cleaning decisions and full column documentation:
-    <a href="https://github.com/gitnic-duke/AIPI-510-Project-1">github.com/gitnic-duke/AIPI-510-Project-1</a>.
-  </p>
-</footer>
-
-</div>
-</body>
-</html>
+<section><h2>The takeaway: </h2>
+<p>Hit songs indeed became shorter and less acoustic, as we expected coming into this project. However, we uncovered the details behind the trends. Much of acousticness decline came early. Song length recently came down after growing for decades.</p>
+<p>The new, unexpected finding was that lower valence became more common, often alongside a danceable rhythm.</p>
+<p>We explored a historical story of the charts to see what the broader musical trends were, but music is uniquely human, and its trends can offer us a reflection of society overall. What do you think these trends tell us?</p>
+</section>
+</main>
+<footer><p>Data: Billboard Hot 100 and Spotify audio features from the supplied <a href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2021/2021-09-14">TidyTuesday dataset (September 2021)</a>.</p><p><a href="https://github.com/gitnic-duke/AIPI-510-Project-1">Project repository</a> · <a href="cleaning-decisions.md">Cleaning decisions</a> · <a href="processed-schema.md">Column definitions</a></p></footer>
+</div></body></html>
