@@ -1,0 +1,14 @@
+{
+  "first_year": 1960,
+  "last_year": 2019,
+  "songs": 27549,
+  "complete_audio": 23039,
+  "known_duration": 23096,
+  "missing_audio": 4510,
+  "missing_audio_with_genre": 2435,
+  "input_file": "songs_features.csv",
+  "unit": "one song, assigned to first observed chart decade",
+  "audio_sample": "all four core scores present",
+  "duration_sample": "duration present",
+  "genre_warning": "artist-tag keyword buckets; exploratory and not manually validated"
+}

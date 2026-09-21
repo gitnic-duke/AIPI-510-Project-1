@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="468pt" height="331.2pt" viewBox="0 0 468 331.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:description>Median acousticness among songs with all four core audio scores, by first chart decade.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 331.2 
+L 468 331.2 
+L 468 0 
+L 0 0 
+z
+" style="fill: #fdfdfc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 53.69774 284.97226 
+L 464.99976 284.97226 
+L 464.99976 51.311802 
+L 53.69774 51.311802 
+z
+" style="fill: #fdfdfc"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="82.063397" y="302.090385" transform="rotate(-0 82.063397 302.090385)">1960s</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="152.977538" y="302.090385" transform="rotate(-0 152.977538 302.090385)">1970s</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="223.891679" y="302.090385" transform="rotate(-0 223.891679 302.090385)">1980s</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="294.805821" y="302.090385" transform="rotate(-0 294.805821 302.090385)">1990s</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="365.719962" y="302.090385" transform="rotate(-0 365.719962 302.090385)">2000s</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="436.634103" y="302.090385" transform="rotate(-0 436.634103 302.090385)">2010s</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="259.34875" y="325.704135" transform="rotate(-0 259.34875 325.704135)">Decade first seen on the Hot 100</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 53.69774 284.97226 
+L 464.99976 284.97226 
+" clip-path="url(#p9b5cfe1cf5)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="45.69774" y="289.531322" transform="rotate(-0 45.69774 289.531322)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 53.69774 238.240168 
+L 464.99976 238.240168 
+" clip-path="url(#p9b5cfe1cf5)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_9">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="45.69774" y="242.799231" transform="rotate(-0 45.69774 242.799231)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 53.69774 191.508077 
+L 464.99976 191.508077 
+" clip-path="url(#p9b5cfe1cf5)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_10">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="45.69774" y="196.067139" transform="rotate(-0 45.69774 196.067139)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 53.69774 144.775985 
+L 464.99976 144.775985 
+" clip-path="url(#p9b5cfe1cf5)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_11">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="45.69774" y="149.335048" transform="rotate(-0 45.69774 149.335048)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <path d="M 53.69774 98.043894 
+L 464.99976 98.043894 
+" clip-path="url(#p9b5cfe1cf5)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_12">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="45.69774" y="102.602956" transform="rotate(-0 45.69774 102.602956)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <path d="M 53.69774 51.311802 
+L 464.99976 51.311802 
+" clip-path="url(#p9b5cfe1cf5)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="45.69774" y="55.870865" transform="rotate(-0 45.69774 55.870865)">1.0</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="12.118365" y="168.142031" transform="rotate(-90 12.118365 168.142031)">Median acousticness (0–1)</text>
+    </g>
+   </g>
+   <g id="line2d_19">
+    <path d="M 82.063397 149.682855 
+L 152.977538 219.196841 
+L 223.891679 255.881533 
+L 294.805821 265.905567 
+L 365.719962 268.195439 
+L 436.634103 265.578442 
+" clip-path="url(#p9b5cfe1cf5)" style="fill: none; stroke: #486cab; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m0c9299c0d9" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #486cab"/>
+    </defs>
+    <g clip-path="url(#p9b5cfe1cf5)">
+     <use xlink:href="#m0c9299c0d9" x="82.063397" y="149.682855" style="fill: #486cab; stroke: #486cab"/>
+     <use xlink:href="#m0c9299c0d9" x="152.977538" y="219.196841" style="fill: #486cab; stroke: #486cab"/>
+     <use xlink:href="#m0c9299c0d9" x="223.891679" y="255.881533" style="fill: #486cab; stroke: #486cab"/>
+     <use xlink:href="#m0c9299c0d9" x="294.805821" y="265.905567" style="fill: #486cab; stroke: #486cab"/>
+     <use xlink:href="#m0c9299c0d9" x="365.719962" y="268.195439" style="fill: #486cab; stroke: #486cab"/>
+     <use xlink:href="#m0c9299c0d9" x="436.634103" y="265.578442" style="fill: #486cab; stroke: #486cab"/>
+    </g>
+   </g>
+   <g id="text_15">
+    <text style="fill: #486cab; font: 11px 'DejaVu Sans'; text-anchor: middle" x="82.063397" y="139.682855" transform="rotate(-0 82.063397 139.682855)">0.579</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #486cab; font: 11px 'DejaVu Sans'; text-anchor: middle" x="152.977538" y="209.196841" transform="rotate(-0 152.977538 209.196841)">0.281</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #486cab; font: 11px 'DejaVu Sans'; text-anchor: middle" x="223.891679" y="245.881533" transform="rotate(-0 223.891679 245.881533)">0.124</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #486cab; font: 11px 'DejaVu Sans'; text-anchor: middle" x="294.805821" y="255.905567" transform="rotate(-0 294.805821 255.905567)">0.082</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #486cab; font: 11px 'DejaVu Sans'; text-anchor: middle" x="365.719962" y="258.195439" transform="rotate(-0 365.719962 258.195439)">0.072</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #486cab; font: 11px 'DejaVu Sans'; text-anchor: middle" x="436.634103" y="255.578442" transform="rotate(-0 436.634103 255.578442)">0.083</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #1a1a1a; font: 700 15px 'DejaVu Sans'" transform="translate(53.69774 14.397896)">The biggest acousticness drop came before</text>
+    <text style="fill: #1a1a1a; font: 700 15px 'DejaVu Sans'" transform="translate(53.69774 31.311802)">the 1990s</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9b5cfe1cf5">
+   <rect x="53.69774" y="51.311802" width="411.30202" height="233.660458"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -13,9 +13,10 @@ python3 -m venv .venv
 
 .venv/bin/python src/clean.py       # raw -> chart_entries.csv, songs.csv
 .venv/bin/python src/features.py    # songs.csv -> songs_features.csv
+.venv/bin/python src/visualize.py   # processed -> docs/figures
 ```
 
-Both scripts print a report and assert their own invariants, so a broken run fails loudly
+Scripts print a report and assert their own invariants, so a broken run fails loudly
 instead of producing quietly wrong numbers. Raw data is committed, so this works from a fresh
 clone with no downloads.
 
@@ -59,7 +60,8 @@ fill.
 data/raw/          committed, never modified
 data/processed/    written by the scripts
 docs/              schema and the reasoning behind each cleaning rule
-notebooks/         exploration, and the decisions the cleaning rules came from
+docs/figures       final visualizations used for report
+notebooks/         exploration used to guide script decisions
 src/               the pipeline
 ```
 

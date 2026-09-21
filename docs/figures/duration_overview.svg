@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="468pt" height="331.2pt" viewBox="0 0 468 331.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:description>Median Spotify recording length by first chart decade; songs with known duration.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 331.2 
+L 468 331.2 
+L 468 0 
+L 0 0 
+z
+" style="fill: #fdfdfc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 61.56149 284.97226 
+L 464.99976 284.97226 
+L 464.99976 34.397896 
+L 61.56149 34.397896 
+z
+" style="fill: #fdfdfc"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="89.384819" y="302.090385" transform="rotate(-0 89.384819 302.090385)">1960s</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="158.943141" y="302.090385" transform="rotate(-0 158.943141 302.090385)">1970s</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="228.501464" y="302.090385" transform="rotate(-0 228.501464 302.090385)">1980s</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="298.059786" y="302.090385" transform="rotate(-0 298.059786 302.090385)">1990s</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="367.618109" y="302.090385" transform="rotate(-0 367.618109 302.090385)">2000s</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="437.176431" y="302.090385" transform="rotate(-0 437.176431 302.090385)">2010s</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="263.280625" y="325.704135" transform="rotate(-0 263.280625 325.704135)">Decade first seen on the Hot 100</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 61.56149 284.97226 
+L 464.99976 284.97226 
+" clip-path="url(#pa25bfdc3ca)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="53.56149" y="289.531322" transform="rotate(-0 53.56149 289.531322)">0:00</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 61.56149 234.857387 
+L 464.99976 234.857387 
+" clip-path="url(#pa25bfdc3ca)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_9">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="53.56149" y="239.41645" transform="rotate(-0 53.56149 239.41645)">1:00</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 61.56149 184.742514 
+L 464.99976 184.742514 
+" clip-path="url(#pa25bfdc3ca)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_10">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="53.56149" y="189.301577" transform="rotate(-0 53.56149 189.301577)">2:00</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 61.56149 134.627642 
+L 464.99976 134.627642 
+" clip-path="url(#pa25bfdc3ca)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_11">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="53.56149" y="139.186704" transform="rotate(-0 53.56149 139.186704)">3:00</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <path d="M 61.56149 84.512769 
+L 464.99976 84.512769 
+" clip-path="url(#pa25bfdc3ca)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_12">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="53.56149" y="89.071831" transform="rotate(-0 53.56149 89.071831)">4:00</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <path d="M 61.56149 34.397896 
+L 464.99976 34.397896 
+" clip-path="url(#pa25bfdc3ca)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="53.56149" y="38.956959" transform="rotate(-0 53.56149 38.956959)">5:00</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="12.118365" y="159.685078" transform="rotate(-90 12.118365 159.685078)">Median length · minutes:seconds</text>
+    </g>
+   </g>
+   <g id="line2d_19">
+    <path d="M 89.384819 152.056759 
+L 158.943141 106.763773 
+L 228.501464 77.862525 
+L 298.059786 69.450744 
+L 367.618109 89.312939 
+L 437.176431 104.998058 
+" clip-path="url(#pa25bfdc3ca)" style="fill: none; stroke: #ad482f; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m0bf3d9ae91" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #ad482f"/>
+    </defs>
+    <g clip-path="url(#pa25bfdc3ca)">
+     <use xlink:href="#m0bf3d9ae91" x="89.384819" y="152.056759" style="fill: #ad482f; stroke: #ad482f"/>
+     <use xlink:href="#m0bf3d9ae91" x="158.943141" y="106.763773" style="fill: #ad482f; stroke: #ad482f"/>
+     <use xlink:href="#m0bf3d9ae91" x="228.501464" y="77.862525" style="fill: #ad482f; stroke: #ad482f"/>
+     <use xlink:href="#m0bf3d9ae91" x="298.059786" y="69.450744" style="fill: #ad482f; stroke: #ad482f"/>
+     <use xlink:href="#m0bf3d9ae91" x="367.618109" y="89.312939" style="fill: #ad482f; stroke: #ad482f"/>
+     <use xlink:href="#m0bf3d9ae91" x="437.176431" y="104.998058" style="fill: #ad482f; stroke: #ad482f"/>
+    </g>
+   </g>
+   <g id="text_15">
+    <text style="fill: #ad482f; font: 11px 'DejaVu Sans'; text-anchor: middle" x="89.384819" y="142.056759" transform="rotate(-0 89.384819 142.056759)">2:39</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #ad482f; font: 11px 'DejaVu Sans'; text-anchor: middle" x="158.943141" y="96.763773" transform="rotate(-0 158.943141 96.763773)">3:33</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #ad482f; font: 11px 'DejaVu Sans'; text-anchor: middle" x="228.501464" y="67.862525" transform="rotate(-0 228.501464 67.862525)">4:08</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #ad482f; font: 11px 'DejaVu Sans'; text-anchor: middle" x="298.059786" y="59.450744" transform="rotate(-0 298.059786 59.450744)">4:18</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #ad482f; font: 11px 'DejaVu Sans'; text-anchor: middle" x="367.618109" y="79.312939" transform="rotate(-0 367.618109 79.312939)">3:54</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #ad482f; font: 11px 'DejaVu Sans'; text-anchor: middle" x="437.176431" y="94.998058" transform="rotate(-0 437.176431 94.998058)">3:35</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #1a1a1a; font: 700 15px 'DejaVu Sans'; text-anchor: start" x="61.56149" y="14.397896" transform="rotate(-0 61.56149 14.397896)">Hits grew longer before they got shorter</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa25bfdc3ca">
+   <rect x="61.56149" y="34.397896" width="403.43827" height="250.574364"/>
+  </clipPath>
+ </defs>
+</svg>
