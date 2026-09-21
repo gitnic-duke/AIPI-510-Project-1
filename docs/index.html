@@ -162,6 +162,19 @@
 </figure>
 <p class="pull">From about 1 in 16 songs to about 2 in 5: less positive-sounding songs with a danceable rhythm on the rise.</p>
 <p>The result is not an accident of choosing exactly 0.5. In the notebook, the share rises under all nine combinations of cutoffs at 0.4, 0.5, and 0.6. Giving each performer credit equal weight produces a similar change, as does looking only at songs that reached the top 10.</p>
+<h3>Less positive-sounding does not mean less energetic</h3>
+<p>Energy tells a related but different story. The share of recordings with lower valence and higher energy rises from <strong>4.1% in the 1960s to 40.5% in the 2010s</strong>. A less cheerful sound can still be intense and active.</p>
+<figure>
+  <a href="figures/mood_energy.svg" aria-label="Open full-size energy comparison">
+    <img src="figures/mood_energy.svg" loading="lazy"
+      alt="Songs with valence below 0.5 and energy at least 0.5 rise from 4.1% in the 1960s to 40.5% in the 2010s.">
+  </a>
+  <figcaption>Each recording must meet both cutoffs. Shares use the same
+    complete-audio sample as the danceability chart.
+    <a href="figures/data/mood_energy.csv">Chart data and sample sizes</a>.
+  </figcaption>
+</figure>
+<p>This is the lower-valence, higher-energy category in our mood feature. Its share rises under all nine combinations of valence and energy cutoffs at 0.4, 0.5, and 0.6 as well. Energy is different from danceability: the two charts overlap, but do not count exactly the same songs.</p>
 <h3>Is that just a change in genre?</h3>
 <p>Not entirely, under our exploratory genre mapping. Among songs tagged as rap, the joint share rises from 16.5% in the 1990s to 57.1% in the 2010s; pop rises from 26.9% to 36.5%. Country moves in the other direction over that comparison, from 37.5% to 27.4%. The overall trend is not a rule that every genre follows.</p>
 <h3>What this says about U.S. listeners</h3>
@@ -169,7 +182,7 @@
 <img src="figures/images/emotional_dance_playlist_cover.jpg" alt="Emotional Dance Playlist Cover" style="width: 50%; display: block; margin-left: auto; margin-right: auto;" loading="lazy">
 <figcaption>A popular modern Spotify playlist that shows appetite for low valence high danceability songs</figcaption>
 </figure>
-<p>This trend shows an increased popularity in the U.S. of perceived "sadder" songs that are still danceable. Intuitively, danceable songs might be more associated with being happy or positive sounding, but recent decades have started to flip this association. Perhaps this reflects a change in the psyche and general attitude of U.S. music listeners. What makes a song appealing to a person is complex, but one explanation for this change in preference could be that people are gravitating towards sadder sounding songs they can empathize with while still being able to relieve stress through the song's danceability. Extrapolating further, this could represent an increasingly negative sentiment towards modern day life and its stressful nature. Note: this isn't supported by evidence, it's just speculation that could help explain the trends we're seeing.</p>
+<p>This trend shows an increased popularity in the U.S. of perceived "sadder" songs that are still danceable and/or energetic. Intuitively, danceable or energetic songs might be more associated with being happy or positive sounding, but recent decades have started to flip this association. Perhaps this reflects a change in the psyche and general attitude of U.S. music listeners. What makes a song appealing to a person is complex, but one explanation for this change in preference could be that people are gravitating towards sadder sounding songs they can empathize with while still being able to relieve stress through the song's danceability or powerful energy. Extrapolating further, this could represent an increasingly negative sentiment towards modern day life and its stressful nature. Note: this isn't supported by evidence, it's just speculation that could help explain the trends we're seeing.</p>
 </section>
 
 <section id="short"><h2><span class="count">Story 02</span>Short songs are making a comeback</h2>
@@ -202,8 +215,32 @@
     </tbody></table></div>
 <p class="byline">Each displayed genre-decade has at least 50 known durations. Artist-tag buckets are exploratory. Changes are calculated before rounding the displayed times. <a href="figures/data/genre_duration.csv">Data and sample sizes</a>.</p>
 <!-- <p>This pattern might bring streaming to mind, but the comparison doesn't isolate its effect. Streaming likely played a part, but what we have is a change in recording length, not evidence of what caused it. The decline isn't driven by a handful of extremely long tracks either: removing recordings over ten minutes changes every decade’s median by less than 0.2 seconds.</p> -->
+<h3>What happens around our streaming-era boundary?</h3>
+<p>Our dataset's streaming-era label switches in August 2007 which is when Billboard introduced streaming into chart calculations). Comparing the ten years on each side, the typical recording becomes about <strong>16 seconds shorter</strong>, while the share under three minutes rises from <strong>4.3% to 8.0%</strong>.</p>
+<div class="chart-grid">
+  <figure>
+    <a href="figures/streaming_length.svg" aria-label="Open full-size duration comparison">
+      <img src="figures/streaming_length.svg" loading="lazy"
+        alt="Median recording length falls from 3 minutes 58 seconds in the earlier window to 3 minutes 42 seconds in the later window.">
+    </a>
+    <figcaption>Median recording length, counting each song once.</figcaption>
+  </figure>
+  <figure>
+    <a href="figures/streaming_short.svg" aria-label="Open full-size short-song comparison">
+      <img src="figures/streaming_short.svg" loading="lazy"
+        alt="The share of recordings under three minutes rises from 4.3% to 8.0% across the nearby ten-year windows.">
+    </a>
+    <figcaption>Share strictly under three minutes, among recordings with known duration.</figcaption>
+  </figure>
+</div>
+<p class="byline">Earlier window: August 11, 1997–August 10, 2007. Later window: August 11, 2007–August 10, 2017. Windows refer to each song's first observed chart date. Duration is available for 2,936 of 3,250 earlier songs (90.3%) and 3,869 of 4,118 later songs (94.0%). <a href="figures/data/streaming_duration.csv">Data, sample sizes, and full-period comparison</a>.</p>
+<aside class="note">
+  <h3>The starting point changes the answer</h3>
+  <p>Comparing all of 1960–2019 across the same boundary gives nearly identical median lengths and a <em>smaller</em> short-song share afterward: 12.8% versus 29.4%. The earlier group includes the many short songs of the 1960s. The nearby windows describe a recent change rather than the whole history.</p>
+</aside>
+<p>Within these nearby windows, median duration also falls in all five large genre buckets, although the under-three-minute share does not rise in every bucket. The annual trend shows shortening was already underway before the boundary. So, while interesting to see, the comparisons don't isolate an effect caused by streaming.</p>
 <h3>An expected trend</h3>
-<p>This is a trend we already expected when starting this project, just based on our own experience seeing short songs becoming more common. We originally even added a feature to indicate whether a song was released post-streaming era (after 8/11/2007 when Billboard introduced streaming into chart calculations) to look at potential impacts from streaming, but we determined this didn't give us much more interesting insights compared to breaking down by year, decade, and genre. The data basically confirms our original hypothesis that songs are indeed getting shorter, across all genres. However, our analysis also allowed us to uncover that songs were short in the 60s and 70s as well, before getting longer and then shorter again. We can only speculate why that's the case, but there could be a number of factors, including changing music listening habits and trends in song structure.</p>
+<p>This is a trend we already expected when starting this project, just based on our own experience seeing short songs becoming more common. Our initial hypothesis about impacts of streaming led us to add the feature to indicate whether a song was released post-streaming era. The data basically confirms our original hypothesis that songs are indeed getting shorter, across all genres. However, our analysis also allowed us to uncover that songs were short in the 60s and 70s as well, before getting longer and then shorter again. We can only speculate why that's the case, but there could be a number of factors, including changing music listening habits and trends in song structure.</p>
 </section>
 
 <section id="acoustic"><h2><span class="count">Story 03</span>The acoustic shift happened earlier</h2>

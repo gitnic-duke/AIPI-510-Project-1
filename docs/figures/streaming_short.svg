@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="432pt" height="331.2pt" viewBox="0 0 432 331.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:description>Earlier: Aug 11, 1997–Aug 10, 2007. Later: Aug 11, 2007–Aug 10, 2017. One song per first observed chart date; known durations only. Descriptive comparison, not a causal effect of streaming.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 331.2 
+L 432 331.2 
+L 432 0 
+L 0 0 
+z
+" style="fill: #fdfdfc"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 72.734615 292.97226 
+L 428.99976 292.97226 
+L 428.99976 51.311802 
+L 72.734615 51.311802 
+z
+" style="fill: #fdfdfc"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="169.897836" y="310.090385" transform="rotate(-0 169.897836 310.090385)">Earlier window</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="331.836539" y="310.090385" transform="rotate(-0 331.836539 310.090385)">Later window</text>
+     </g>
+    </g>
+    <g id="text_3">
+     <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="250.867188" y="325.704135" transform="rotate(-0 250.867188 325.704135)">Ten years on each side of August 2007</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <path d="M 72.734615 292.97226 
+L 428.99976 292.97226 
+" clip-path="url(#pba66ff15a8)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="64.734615" y="297.531322" transform="rotate(-0 64.734615 297.531322)">0.0%</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <path d="M 72.734615 252.695517 
+L 428.99976 252.695517 
+" clip-path="url(#pba66ff15a8)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_5">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="64.734615" y="257.25458" transform="rotate(-0 64.734615 257.25458)">2.0%</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <path d="M 72.734615 212.418774 
+L 428.99976 212.418774 
+" clip-path="url(#pba66ff15a8)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_6">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="64.734615" y="216.977837" transform="rotate(-0 64.734615 216.977837)">4.0%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <path d="M 72.734615 172.142031 
+L 428.99976 172.142031 
+" clip-path="url(#pba66ff15a8)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_7">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="64.734615" y="176.701094" transform="rotate(-0 64.734615 176.701094)">6.0%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <path d="M 72.734615 131.865288 
+L 428.99976 131.865288 
+" clip-path="url(#pba66ff15a8)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="64.734615" y="136.424351" transform="rotate(-0 64.734615 136.424351)">8.0%</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <path d="M 72.734615 91.588545 
+L 428.99976 91.588545 
+" clip-path="url(#pba66ff15a8)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="64.734615" y="96.147608" transform="rotate(-0 64.734615 96.147608)">10.0%</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15">
+      <path d="M 72.734615 51.311802 
+L 428.99976 51.311802 
+" clip-path="url(#pba66ff15a8)" style="fill: none; stroke: #deded9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_10">
+      <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: end" x="64.734615" y="55.870865" transform="rotate(-0 64.734615 55.870865)">12.0%</text>
+     </g>
+    </g>
+    <g id="text_11">
+     <text style="fill: #5c5c5c; font: 12px 'DejaVu Sans'; text-anchor: middle" x="12.118365" y="172.142031" transform="rotate(-90 12.118365 172.142031)">Recordings under three minutes</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 125.364693 292.97226 
+L 214.430979 292.97226 
+L 214.430979 206.547369 
+L 125.364693 206.547369 
+z
+" clip-path="url(#pba66ff15a8)" style="fill: #486cab"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 287.303396 292.97226 
+L 376.369682 292.97226 
+L 376.369682 131.09494 
+L 287.303396 131.09494 
+z
+" clip-path="url(#pba66ff15a8)" style="fill: #ad482f"/>
+   </g>
+   <g id="text_12">
+    <text style="fill: #1a1a1a; font: 12px 'DejaVu Sans'; text-anchor: middle" x="169.897836" y="198.547369" transform="rotate(-0 169.897836 198.547369)">4.3%</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #1a1a1a; font: 12px 'DejaVu Sans'; text-anchor: middle" x="331.836539" y="123.09494" transform="rotate(-0 331.836539 123.09494)">8.0%</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #1a1a1a; font: 700 15px 'DejaVu Sans'" transform="translate(72.734615 14.397896)">Very short recordings became more</text>
+    <text style="fill: #1a1a1a; font: 700 15px 'DejaVu Sans'" transform="translate(72.734615 31.311802)">common</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pba66ff15a8">
+   <rect x="72.734615" y="51.311802" width="356.265145" height="241.660458"/>
+  </clipPath>
+ </defs>
+</svg>

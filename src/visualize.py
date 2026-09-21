@@ -112,6 +112,9 @@ def load_data(path):
         'eda_core_complete',
         'has_genre',
         *SCORES,
+        'mood',
+        'streaming_era',
+        'first_observed_chart_date',
     }
     missing = required - set(songs.columns)
     if missing:
@@ -585,6 +588,101 @@ def write_summary(sample, audio, lengths, input_path, tables_dir, output_dir):
     print(json.dumps(metadata, indent=2))
     print(f"Wrote {len(list(output_dir.glob('*.svg')))} SVG figures and supporting tables to {output_dir}")
 
+def plot_mood_energy(audio, tables_dir, output_dir):
+    """Show the energy-based mood category on the existing audio sample."""
+    # Validate the stored category against its two measured inputs.
+    expected = pd.Series('happy', index=audio.index)
+    expected.loc[audio.valence < 0.5] = 'sad'
+    expected += '/'
+    expected += audio.energy.ge(0.5).map({True: 'energetic', False: 'calm'})
+    if not audio.mood.eq(expected).all():
+        raise ValueError('Mood labels disagree with the valence/energy cutoffs.')
+
+    selected = audio.mood.eq('sad/energetic')
+    summary = selected.groupby(audio.decade).agg(['size', 'sum', 'mean'])
+    summary['percent'] = summary['mean'] * 100
+    summary.to_csv(tables_dir / 'mood_energy.csv')
+
+    fig, ax = create_figure(
+        'Less positive-sounding music can still be energetic',
+        'Songs with lower valence and higher energy', ymax=100
+    )
+    ax.yaxis.set_major_formatter(PercentFormatter(100))
+    plot_labeled_line(
+        ax, summary['percent'], COLORS['energy'], lambda x: f'{x:.1f}%'
+    )
+    save_figure(
+        fig, output_dir, 'mood_energy',
+        'Share with valence below 0.5 and energy at least 0.5; '
+        'songs with all four core audio scores, counted once by first chart decade.'
+    )
+
+def plot_streaming_comparison(sample, tables_dir, output_dir):
+    """Compare duration near the stored flag boundary, retaining full-period data."""
+    data = sample.copy()
+    data['streaming_era'] = data.streaming_era.astype(str).str.lower().map(
+        {'true': True, 'false': False}
+    )
+    data['first_date'] = pd.to_datetime(data.first_observed_chart_date)
+    # First weekly chart date marked True in the notebook's supplied table.
+    boundary = pd.Timestamp('2007-08-11')
+    if data.streaming_era.isna().any() or not data.streaming_era.eq(
+        data.first_date >= boundary
+    ).all():
+        raise ValueError('Streaming flag differs from the notebook; review the dates.')
+
+    nearby = data[
+        data.first_date.ge(boundary - pd.DateOffset(years=10))
+        & data.first_date.lt(boundary + pd.DateOffset(years=10))
+    ]
+    summaries = {}
+    for name, frame in [('Full 1960–2019', data), ('Nearby ten-year windows', nearby)]:
+        grouped = frame.groupby('streaming_era')
+        summary = grouped.agg(
+            all_songs=('song_id', 'size'),
+            with_duration=('duration_minutes', 'count'),
+            median_minutes=('duration_minutes', 'median'),
+        )
+        # Missing durations must not count as songs over three minutes.
+        summary['under_three_pct'] = grouped.duration_minutes.apply(
+            lambda x: x.dropna().lt(3).mean() * 100
+        )
+        summary['coverage_pct'] = summary.with_duration / summary.all_songs * 100
+        summaries[name] = summary.reindex([False, True])
+    pd.concat(summaries, names=['comparison']).to_csv(
+        tables_dir / 'streaming_duration.csv'
+    )
+
+    summary = summaries['Nearby ten-year windows']
+    panels = [
+        ('median_minutes', 'Typical recordings became shorter',
+         'Median length · minutes:seconds', 5, format_minutes, 'streaming_length'),
+        ('under_three_pct', 'Very short recordings became more common',
+         'Recordings under three minutes', 12, lambda x: f'{x:.1f}%', 'streaming_short'),
+    ]
+    for metric, title, ylabel, ymax, formatter, filename in panels:
+        fig, ax = create_figure(
+            title, ylabel, ymax=ymax, figsize=(6, 4.6), decades=False
+        )
+        values = summary[metric]
+        ax.bar([0, 1], values, width=0.55, color=['#486cab', '#ad482f'])
+        ax.set_xticks([0, 1], ['Earlier window', 'Later window'])
+        ax.set_xlim(-0.6, 1.6)
+        ax.set_xlabel('Ten years on each side of August 2007')
+        if metric == 'median_minutes':
+            ax.yaxis.set_major_formatter(FuncFormatter(format_minutes))
+        else:
+            ax.yaxis.set_major_formatter(PercentFormatter(100))
+        for x, value in enumerate(values):
+            ax.annotate(formatter(value), (x, value), xytext=(0, 8),
+                        textcoords='offset points', ha='center')
+        save_figure(
+            fig, output_dir, filename,
+            'Earlier: Aug 11, 1997–Aug 10, 2007. Later: Aug 11, 2007–Aug 10, 2017. '
+            'One song per first observed chart date; known durations only. '
+            'Descriptive comparison, not a causal effect of streaming.'
+        )
+
 
 def main():
     """Load the song table, generate each story, and export supporting data."""
@@ -611,8 +709,10 @@ def main():
     plot_duration_overview(duration_summary, output_dir)
     plot_audio_overview(audio, tables_dir, output_dir)
     plot_valence_danceability(audio, tables_dir, output_dir)
+    plot_mood_energy(audio, tables_dir, output_dir)
     plot_short_songs(duration_summary, output_dir)
     plot_recent_duration(lengths, tables_dir, output_dir)
+    plot_streaming_comparison(sample, tables_dir, output_dir)
     plot_acoustic_shift(audio_medians, output_dir)
 
     # Supporting analysis: genre differences and the limits of missing data.
